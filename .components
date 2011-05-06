@@ -1,0 +1,8 @@
+--- 
+:test: none
+:mock: none
+:orm: none
+:script: none
+:stylesheet: sass
+:renderer: haml
+:session_secret: 54a02c673abf4f0aab8965d95a3dcdfa8e7454e27599a088ed03c820489aca4c
