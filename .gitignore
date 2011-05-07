@@ -5,3 +5,7 @@ bin/*
 vendor/gems/*
 !vendor/gems/cache/
 .sass-cache/*
+*.un~
+book/**/*
+book/*
+pkg/*
