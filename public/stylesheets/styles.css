@@ -1,0 +1,1877 @@
+/*
+#####################################################################
+LAKER Version 1.0 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of the LESS CSS Framework
+(http://www.lessframework.com). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+/*	Imports
+	------	*/
+/*################################### "Oswald" for headlines ############################*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'Oswald';
+  src: url("../fonts/oswald/oswald-webfont.eot");
+  src: url("../fonts/oswald/oswald-webfont.eot?#iefix") format("eot"), url("../fonts/oswald/oswald-webfont.woff") format("woff"), url("../fonts/oswald/oswald-webfont.ttf") format("truetype"), url("../fonts/oswald/oswald-webfont.svg#webfont1Pz3m7lF") format("svg"); }
+
+/*################################### Copy text PTSerif ############################*/
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'PTSerifRegular';
+  src: url("../fonts/ptserif/pt_serif-web-regular-webfont.eot");
+  src: url("../fonts/ptserif/pt_serif-web-regular-webfont.eot?iefix") format("eot"), url("../fonts/ptserif/pt_serif-web-regular-webfont.woff") format("woff"), url("../fonts/ptserif/pt_serif-web-regular-webfont.ttf") format("truetype"), url("../fonts/ptserif/pt_serif-web-regular-webfont.svg#webfontUKUF9e5Z") format("svg"); }
+
+h1,
+h2,
+h3,
+h4,
+p,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-weight: normal;
+  font-family: 'PTSerifRegular'; }
+
+.content-element h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  color: #1c1c1c;
+  font-size: 3em;
+  font-family: 'Oswald';
+  line-height: 1.1em;
+  clear: both; }
+
+.content-element h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  color: #1c1c1c;
+  font-size: 1.8em;
+  font-family: 'Oswald';
+  line-height: 1.1em; }
+
+p {
+  display: block;
+  margin-bottom: 15px;
+  color: #555555;
+  font-size: 1.188em;
+  line-height: 1.50em; }
+
+li {
+  color: #555555;
+  font-size: 1.188em;
+  line-height: 1.50em !important; }
+
+a:link, a:visited, a:hover {
+  color: #f27c29; }
+
+.content-element a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #f27c29; }
+
+.dossier-number {
+  position: absolute;
+  width: 82px;
+  height: 138px;
+  margin-top: 0px;
+  margin-left: 28px;
+  text-align: center;
+  background-image: url(../images/dossier-number-bg.png);
+  z-index: 900;
+  opacity: 1; }
+
+.dossier-number p {
+  margin-left: -8px;
+  padding-top: 48px;
+  color: #fff;
+  font-size: 2.6em;
+  font-family: 'Oswald'; }
+
+.footer p {
+  color: #c7c7c7;
+  font-size: 0.9em; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  .dossier-number {
+    margin-left: 64px; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  .content-element h1 {
+    margin-bottom: 20px;
+    font-size: 2.2em; }
+
+  p {
+    line-height: 1.40em; }
+
+  .dossier-number {
+    width: 60px;
+    height: 100px;
+    margin-top: -8px;
+    margin-left: 14px;
+    background-size: 60px 100px; }
+
+  .dossier-number p {
+    margin-left: -7px;
+    padding-top: 30px;
+    font-size: 2em; } }
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .dossier-number {
+    width: 60px;
+    height: 100px;
+    margin-top: -8px;
+    margin-left: 22px;
+    background-size: 60px 100px; } }
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+.small-column,
+.medium-column,
+.full-column {
+  position: relative;
+  float: left;
+  margin-right: 24px; }
+
+.small-column {
+  clear: both;
+  width: 160px; }
+
+.medium-column {
+  width: 436px; }
+
+.full-column {
+  width: 896px; }
+
+.content-element {
+  margin-bottom: 0px;
+  margin-right: 28px;
+  margin-left: 28px;
+  overflow: hidden; }
+
+.media-right,
+.media-left {
+  width: 344px;
+  height: auto;
+  padding-bottom: 15px; }
+
+.media-right {
+  float: right;
+  margin-right: -184px;
+  margin-left: 24px; }
+
+.media-left {
+  float: left;
+  margin-right: 24px;
+  margin-left: -184px; }
+
+.starting-headline {
+  width: 712px;
+  padding-top: 40px;
+  background-color: #fff;
+  clear: both; }
+
+.large-column {
+  width: 712px; }
+
+.float-right {
+  margin-right: 0px;
+  float: right; }
+
+.float-left {
+  margin-left: 0px;
+  float: left; }
+
+.dossier-start-bg {
+  height: 648px;
+  padding-top: 120px;
+  background-color: #efefef;
+  background-image: url(../../images/dossier-zuvielaltes/dossier-start.jpg);
+  background-size: cover;
+  -moz-background-size: cover;
+  background-repeat: no-repeat; }
+
+.footer {
+  width: 100%;
+  clear: both;
+  padding-top: 20px; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content-element {
+    width: 712px;
+    margin-right: 28px;
+    margin-left: 28px;
+    margin: auto;
+    overflow: hidden; }
+
+  .large-column {
+    width: 528px; }
+
+  .starting-headline {
+    width: 528px; }
+
+  .full-column {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-right: 24px; }
+
+  .media-right,
+  .media-left {
+    width: 252px; }
+
+  .medium-column {
+    width: 344px; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  .dossier-start-bg {
+    height: 904px; }
+
+  .medium-column {
+    width: 344px; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  .content-element {
+    width: 896px;
+    margin: auto;
+    padding: 0px !important; }
+
+  .large-column {
+    width: 712px; }
+
+  .starting-headline {
+    width: 712px; }
+
+  .dossier-start-bg {
+    height: 648px; }
+
+  .medium-column {
+    width: 436px; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  .content-element {
+    width: 292px;
+    margin-right: 14px;
+    margin-left: 14px;
+    padding: 0px; }
+
+  .large-column,
+  .starting-headline {
+    float: none;
+    width: 100%; }
+
+  .dossier-start-bg {
+    height: 360px; }
+
+  .small-column,
+  .medium-column,
+  .full-column {
+    float: none;
+    width: 100%;
+    margin-right: 0px;
+    padding: 0px; }
+
+  .float-right,
+  .float-left {
+    float: none; }
+
+  .media-left,
+  .media-right {
+    width: 100%;
+    margin: 0px; } }
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .content-element {
+    width: 436px;
+    margin: auto; }
+
+  .dossier-start-bg {
+    height: 260px;
+    padding-top: 60px; } }
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+object, param, embed {
+  width: 100%;
+  height: 200px; }
+
+/*.caption {
+    position: relative; display: inline; float: right;
+    width: auto;
+    margin-top: -5px; margin-right: 10px; margin-left: 10px;
+    padding: 15px;
+    background-color: #f8f8f8; color: #000;
+    font-family: 'Georgia'
+}*/
+.media-left img,
+.media-right img {
+  width: 100%;
+  height: auto; }
+
+.small-column img, medium-column img {
+  width: 100%;
+  height: auto; }
+
+.caption p {
+  margin-top: 12px;
+  font-size: 1em;
+  line-height: 1.2em; }
+
+/* Floating the caption in the slideshow-module on the right*/
+.imgscroll-img .caption p {
+  float: right;
+  margin-right: 10px; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+/*
+#####################################################################
+Navigation bar
+#####################################################################
+*/
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #000;
+  opacity: 0.9;
+  z-index: 999;
+  -webkit-transition: opacity 0.2s ease-out;
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+.nav-bar-container {
+  width: 896px;
+  margin: auto; }
+
+/*
+##############Navigation bar edges
+*/
+.edge-left,
+.edge-right {
+  position: fixed;
+  top: 30px;
+  width: 8px;
+  height: 8px;
+  z-index: 500;
+  opacity: 0.9; }
+
+.edge-left {
+  left: 0;
+  background-image: url(../images/nav/edge-left.png); }
+
+.edge-right {
+  right: 0;
+  background-image: url(../images/nav/edge-right.png); }
+
+/*
+#####################################################################
+Navigation buttons
+#####################################################################
+*/
+.nav-button {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 23px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  background-color: transparent;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  font-family: 'PTSerifRegular';
+  overflow: hidden;
+  white-space: nowrap; }
+
+.nav-button:hover {
+  width: 20px;
+  height: 23px;
+  padding-top: 7px;
+  padding-right: 10px;
+  background-color: #000;
+  color: #fff;
+  text-align: right;
+  text-decoration: none;
+  overflow: visible; }
+
+.nav-button:hover div.toc-list,
+.nav-button:hover span.toc-dossier {
+  display: block; }
+
+.nav-button:hover div {
+  display: block;
+  text-align: left; }
+
+.nav-button:hover p {
+  display: block;
+  margin-right: 20px; }
+
+.nav-button .toc-label {
+  display: none; }
+
+.nav-button-text {
+  width: 130px;
+  margin-top: 23px;
+  padding: 10px;
+  background-color: #000;
+  opacity: 1;
+  -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
+
+a.nav-button:firstChild {
+  margin-top: 0px;
+  margin-left: 0px; }
+
+.nav-button.toc {
+  margin-right: -28px;
+  padding-top: 7px;
+  text-align: right;
+  background-image: url(../images/nav/toc-active.png);
+  background-position: top right; }
+
+.nav-button.toc:hover {
+  width: 421px;
+  height: 23px;
+  padding-right: 15px !important;
+  background-image: url(../images/nav/toc-active.png); }
+
+.toc-label {
+  padding-right: 20px !important;
+  text-align: right !important; }
+
+.nav-button.cover {
+  position: fixed;
+  float: left;
+  background-image: url(../images/nav/cover-active.png);
+  z-index: 2999;
+  display: block;
+  margin: 0px; }
+
+.nav-button.cover .nav-button-text {
+  width: 45px; }
+
+.nav-button.cover:hover {
+  background-image: url(../images/nav/cover-active.png); }
+
+.nav-button.next {
+  position: fixed;
+  margin-left: 65px;
+  z-index: 1999;
+  background-image: url(../images/nav/next-active.png); }
+
+.nav-button.next .nav-button-text {
+  width: 90px; }
+
+.nav-button.next:hover {
+  background-image: url(../images/nav/next-active.png); }
+
+.nav-button.prev {
+  position: fixed;
+  margin-left: 36px;
+  z-index: 1999;
+  background-image: url(../images/nav/prev-active.png); }
+
+.nav-button.prev .nav-button-text {
+  width: 120px; }
+
+.nav-button.prev:hover {
+  background-image: url(../images/nav/prev-active.png); }
+
+.logo-small {
+  position: fixed;
+  left: 45%;
+  padding-top: 6px;
+  text-align: center;
+  z-index: 1500; }
+
+/*
+#####################################################################
+Table of content on desktop browsers
+#####################################################################
+*/
+/*
+############ Customizing the scroll bar color in webkit browsers
+*/
+.toc-list::-webkit-scrollbar-button:start:decrement,
+.toc-list::-webkit-scrollbar-button:end:increment {
+  display: block; }
+
+.toc-list::-webkit-scrollbar-resizer:vertical {
+  background-color: gray; }
+
+.toc-list::-webkit-scrollbar-corner:vertical {
+  background-color: black; }
+
+.toc-list::-webkit-scrollbar-button:vertical {
+  background-color: 000; }
+
+.toc-list::-webkit-scrollbar-button:vertical:start:increment,
+.toc-list::-webkit-scrollbar-button:vertical:end:decrement {
+  display: none; }
+
+.toc-list::-webkit-scrollbar-button:vertical:increment {
+  height: 0px;
+  background-color: purple; }
+
+.toc-list::-webkit-scrollbar-button:vertical:decrement {
+  height: 0px;
+  background-color: purple; }
+
+.toc-list::-webkit-scrollbar-thumb:vertical {
+  height: 50px;
+  background-color: #f27c29; }
+
+.toc-list::-webkit-scrollbar-track:vertical {
+  background-color: blue; }
+
+.toc-list::-webkit-scrollbar-track-piece {
+  background-color: #333; }
+
+.toc-list .toc-dossier-number {
+  position: absolute;
+  float: right;
+  right: 10px;
+  width: 110px;
+  color: #ffffff;
+  font-size: 8em;
+  text-align: right !important;
+  font-family: "Oswald";
+  z-index: 1;
+  opacity: 0.2; }
+
+.toc-list::-webkit-scrollbar {
+  width: 7px;
+  height: 6px;
+  margin-left: -1px; }
+
+/*
+############ Customizing the pop up list view
+*/
+.toc-list {
+  width: 420px;
+  height: 420px;
+  margin-top: 6px;
+  margin-right: -10px;
+  background-color: #000;
+  border-top: 1px solid #000;
+  white-space: normal;
+  overflow: auto;
+  border: 8px solid #000;
+  -webkit-box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+.toc-list .toc-dossier p {
+  position: relative;
+  display: block;
+  z-index: 100; }
+
+.toc-list h1 {
+  margin-bottom: 0px;
+  color: #fff;
+  font-family: 'Oswald'; }
+
+.toc-list p {
+  color: efefef;
+  text-transform: none;
+  -webkit-transition: color 0.2s ease-out; }
+
+.toc-dossier {
+  position: relative;
+  display: block;
+  float: left;
+  width: 96%;
+  height: 120px;
+  padding: 2%;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-in;
+  z-index: 3; }
+
+.toc-dossier:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out; }
+
+.toc-dossier:hover h1 {
+  color: #f27c29;
+  -webkit-transition: color 0.2s ease-out; }
+
+.toc-dossier:hover p {
+  color: #fff;
+  -webkit-transition: color 0.2s ease-out; }
+
+.toc-dossier h1 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1.9em;
+  line-height: 1em !important; }
+
+.toc-dossier p {
+  line-height: 1.2em !important; }
+
+.toc-thumb {
+  float: left;
+  margin-top: 3px;
+  margin-right: 20px;
+  border: 3px solid #333; }
+
+/*
+#####################################################################
+Table of content on iOS devices
+#####################################################################
+*/
+body.body-toc-ios {
+  width: 1640px;
+  /* The width must be number of table of content entries * width of entry (410px)*/
+  margin: 0px;
+  padding: 0px;
+  background-color: #000; }
+
+.toc-list-ios {
+  height: 197px;
+  margin-top: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  border-top: 3px solid #f27c29;
+  white-space: normal; }
+
+.toc-list-ios .toc-dossier-number {
+  position: absolute;
+  margin-top: -60px;
+  margin-left: -35px;
+  font-size: 8em;
+  font-family: "Oswald";
+  z-index: -5;
+  opacity: 0.4; }
+
+.toc-list-ios .toc-dossier {
+  display: block;
+  float: left;
+  width: 349px;
+  height: 117px;
+  margin-top: 0px;
+  margin-right: 0px;
+  padding: 40px;
+  padding-right: 20px;
+  background-color: transparent;
+  color: #efefef;
+  border-right: 1px solid #333333;
+  border-bottom: 0px solid #333;
+  opacity: 1;
+  white-space: normal; }
+
+.toc-list-ios .toc-dossier:last-child {
+  width: 350px;
+  border-right: 0px solid #000; }
+
+.toc-list-ios .toc-dossier:hover h1 {
+  color: #fff; }
+
+.toc-list-ios .toc-dossier p {
+  color: #9a9a9a; }
+
+.toc-list-ios h1 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 1.2em;
+  font-family: 'Oswald';
+  line-height: 1.1em; }
+
+.toc-list-ios p {
+  color: efefef !important;
+  font-size: 1em;
+  text-transform: none;
+  line-height: 1.2em !important; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .nav-bar-container {
+    width: 768px;
+    margin: auto; }
+
+  .nav-button.toc {
+    margin-right: 0px; } }
+/*
+#####################################################################
+Hide navigation bar on iOS devices
+#####################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .nav-bar,
+  .edge-left,
+  .edge-right,
+  .logo-small,
+  .nav-button.cover,
+  .nav-container,
+  .nav-button {
+    display: none; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  .nav-bar-container {
+    display: none;
+    width: 1024px;
+    margin: auto; }
+
+  .nav-bar,
+  .edge-left,
+  .edge-right,
+  .logo-small,
+  .nav-button.cover,
+  .nav-container,
+  .nav-button {
+    display: none; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  .nav-bar,
+  .edge-left,
+  .edge-right,
+  .logo-small,
+  .nav-button.cover,
+  .nav-container,
+  .nav-button,
+  .nav-bar {
+    display: none; } }
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+.sound-box,
+.sound-box-active {
+  margin-bottom: 15px;
+  padding-top: 90px !important;
+  padding: 18px;
+  background-color: #f27c29;
+  color: #000;
+  background-image: url("../images/loudspeaker-symbol.png");
+  background-repeat: no-repeat;
+  background-position: 18px 18px; }
+
+.sound-box-active p {
+  color: #fff; }
+
+.sound-box p,
+.sound-box-active p {
+  color: #000;
+  font-size: 1em;
+  font-family: 'PTSerifRegular';
+  line-height: 1.2em !important; }
+
+.sound-box-active {
+  background-color: #000;
+  color: #fff;
+  background-image: url("../images/loudspeaker-symbol-active.gif"); }
+
+.sound-box-active p {
+  color: #fff; }
+
+.jp-audio a:link,
+.jp-audio a:visited {
+  color: #000;
+  text-decoration: none; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .sound-box,
+  .sound-box-active {
+    margin-top: -15px; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  .sound-box,
+  .sound-box-active {
+    margin-top: -15px; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+#imgscroll-content {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  margin-bottom: 120px;
+  overflow: hidden; }
+
+#imgscroll-legend {
+  display: none;
+  margin-bottom: 0px;
+  background-color: #f27c29; }
+
+#imgscroll-legend p {
+  margin-bottom: 0px;
+  padding: 10px;
+  color: #000;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-family: "PTSerifBold"; }
+
+#imgscroll-imgs {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+#imgscroll-img {
+  display: inline;
+  float: left;
+  width: 100%;
+  height: auto;
+  /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+#imgscroll-img img {
+  display: inline;
+  width: 100%; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  #imgscroll-legend {
+    display: block; }
+
+  #imgscroll-imgs {
+    width: 4000%; }
+
+  #imgscroll-img {
+    float: left;
+    width: 768px !important; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  #imgscroll-legend {
+    display: block; }
+
+  #imgscroll-imgs {
+    width: 4000%; }
+
+  #imgscroll-img {
+    float: left;
+    width: 1024px !important; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  #imgscroll-legend {
+    display: block; }
+
+  #imgscroll-content {
+    margin-bottom: 50px; }
+
+  #imgscroll-imgs {
+    width: 4000%; }
+
+  #imgscroll-img {
+    float: left;
+    width: 320px !important; } }
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #imgscroll-img {
+    float: left;
+    width: 480px !important; } }
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+.card-flip {
+  cursor: pointer;
+  float: left;
+  width: 252px;
+  height: 252px;
+  float: left;
+  margin-top: 10px;
+  -webkit-perspective: 1000 !important;
+  margin-bottom: 20px;
+  margin-right: 24px; }
+
+.back {
+  display: none; }
+
+.flip-arrow {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -18px; }
+
+.flip-arrow-back {
+  position: absolute;
+  margin-left: 0px;
+  margin-top: -18px; }
+
+.flip-arrow img, .flip-arrow-back img {
+  width: 49px;
+  height: 48px; }
+
+.card-flip .front, .card-flip .back {
+  background-color: #f8f8f8;
+  padding: 10px;
+  padding-left: 0px;
+  padding-top: 2px;
+  padding-right: 16px;
+  width: 236px;
+  height: 240px;
+  text-align: left; }
+
+.card-flip .back {
+  background-color: #efefef; }
+
+.card-flip-text {
+  margin-top: 50px;
+  padding: 20px; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  .card-flip, #flip {
+    margin: auto;
+    margin-bottom: 20px;
+    float: none; } }
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+/*
+#####################################################################
+LAKER Version 1.0 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of the LESS CSS Framework
+(http://www.lessframework.com). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+                                                 /*Turn on the visual grid view, by deleting the "/*"...
+@import url('display-grid.css');
+*/
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://creativecommons.org/licenses/MIT/	*/
+/*	Resets
+	------	*/
+img::-moz-selection {
+  background: transparent; }
+
+img::selection {
+  background: transparent; }
+
+article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video {
+  display: block; }
+
+a img {
+  border: 0; }
+
+body {
+  overflow-x: hidden; }
+
+.dossier-headline-arrow {
+  position: relative;
+  margin-top: -38px;
+  margin-bottom: -15px;
+  margin-left: 371px;
+  z-index: 10; }
+
+.dossier-headline-arrow img {
+  width: 30px;
+  height: 30px; }
+
+/* Selection colours (easy to forget) */
+::selection {
+  background: #d3f9f2; }
+
+::-moz-selection {
+  background: #d3f9f2; }
+
+body {
+  margin: auto;
+  -webkit-tap-highlight-color: #d3f9f2; }
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+body {
+  width: 952px;
+  padding: 0px;
+  background-color: #fff;
+  color: #3c3c3c;
+  -webkit-text-size-adjust: 100%;
+  /* Stops Mobile Safari from auto-adjusting font-sizes */ }
+
+.portrait {
+  display: none; }
+
+.browser-only {
+  display: block; }
+
+.ipad-only,
+.iphone-only,
+.ios-only {
+  display: none; }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    width: 768px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px !important;
+    margin: auto; }
+
+  .dossier-headline-arrow {
+    margin-left: 279px; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px; }
+
+  .portrait {
+    display: block; }
+
+  .landscape {
+    display: none; }
+
+  .browser-only {
+    display: none; }
+
+  .ipad-only,
+  .ios-only {
+    display: block; } }
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) {
+  body {
+    width: 100%;
+    margin: auto;
+    padding: 0px; }
+
+  .portrait {
+    display: none; }
+
+  .landscape {
+    display: block; }
+
+  .browser-only {
+    display: none; }
+
+  .ipad-only,
+  .ios-only {
+    display: block; }
+
+  .dossier-headline-arrow {
+    margin-left: 405px; } }
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (max-width: 767px) {
+  body {
+    width: 320px;
+    margin: auto;
+    padding: 0px; }
+
+  .portrait {
+    display: block; }
+
+  .landscape {
+    display: none; }
+
+  .browser-only,
+  ipad-only {
+    display: none; }
+
+  .iphone-only,
+  .ios-only {
+    display: block; }
+
+  .dossier-headline-arrow {
+    margin-left: 145px; } }
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body {
+    width: 480px;
+    padding: 0px; }
+
+  .portrait {
+    display: none; }
+
+  .landscape {
+    display: block; }
+
+  .dossier-headline-arrow {
+    margin-left: 225px; } }
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+                                                 /*Turn on the visual grid view, by deleting the "/*"...
+@import 'display-grid';
+*/
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+body#cover {
+  background-color: #000; }
+
+#cover .content-element a {
+  color: #fff; }
+
+.dossier-start-bg {
+  background-image: url(/images/cover/dossier-start-bg.jpg); }
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/

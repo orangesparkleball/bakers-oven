@@ -1,0 +1,83 @@
+/*
+Syntax error: Undefined variable: "$accent_color".
+        on line 20 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/sound_box.scss
+
+15: .sound-box,
+16: .sound-box-active {
+17:     margin-bottom: 15px;
+18:     padding-top: 90px !important;
+19:     padding: 18px;
+20:     background-color: $accent_color; color: #000;
+21:     background-image: url('../images/loudspeaker-symbol.png');
+22:     background-repeat: no-repeat;
+23:     background-position: 18px 18px;
+24: }
+25: .sound-box-active p {    color: #fff }
+
+Backtrace:
+/Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/sound_box.scss:20
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/script/variable.rb:45:in `_perform'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/script/node.rb:40:in `perform'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:230:in `visit_rule'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:27:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:39:in `with_environment'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:26:in `visit_children'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:47:in `visit_root'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:18:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/engine.rb:291:in `_render'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/engine.rb:238:in `render'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:319:in `update_stylesheet'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:181:in `update_stylesheets'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:175:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:175:in `update_stylesheets'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:173:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/compiler.rb:173:in `update_stylesheets'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin.rb:81:in `update_stylesheets'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin.rb:54:in `check_for_updates'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/plugin/rack.rb:51:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/rack-1.2.2/lib/rack/session/cookie.rb:37:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/rack-1.2.2/lib/rack/head.rb:9:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sinatra-1.2.6/lib/sinatra/showexceptions.rb:21:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sinatra-1.2.6/lib/sinatra/base.rb:1272:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sinatra-1.2.6/lib/sinatra/base.rb:1303:in `synchronize'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sinatra-1.2.6/lib/sinatra/base.rb:1272:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:71:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:64:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:64:in `call'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:99:in `start'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `each'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `start'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `start'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:13:in `run'
+/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/bin/nack_worker:4
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$accent_color\".\A         on line 20 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/sound_box.scss\A \A 15: .sound-box,\A 16: .sound-box-active {\A 17:     margin-bottom: 15px;\A 18:     padding-top: 90px !important;\A 19:     padding: 18px;\A 20:     background-color: $accent_color; color: #000;\A 21:     background-image: url('../images/loudspeaker-symbol.png');\A 22:     background-repeat: no-repeat;\A 23:     background-position: 18px 18px;\A 24: }\A 25: .sound-box-active p {    color: #fff }"; }

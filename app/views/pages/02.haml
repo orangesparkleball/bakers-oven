@@ -1,0 +1,41 @@
+.large-column.float-left
+  %p
+    %em Laker 
+    is built on top of the stuff
+  %hr
+  %br
+
+.large-column.float-left
+  %h1 Images &amp; slideshow
+  %h2 Image in text (right)
+  %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit tortor, ullamcorper id laoreet vel, ultricies ut lorem. Curabitur porta orci ut lacus vestibulum porttitor. Suspendisse potenti. Donec sodales ante eu dui molestie euismod ultricies nisl sollicitudin. Phasellus eget mauris eu velit mollis consectetur a in elit. Pellentesque eu lorem nunc. Integer eu elit massa. Morbi vestibulum lacus a quam sagittis pulvinar tristique arcu posuere. Aliquam sollicitudin risus risus, at semper neque. Aliquam rhoncus rhoncus ultrices.
+  = all_pages.inspect
+      
+  .media-right
+    %img(src="images/dossier-01/image-in-text.jpg" width="400" height="600")
+      
+  %p Aliquam erat volutpat. Aenean in nibh vitae leo placerat viverra. Pellentesque non sapien ac orci fermentum molestie in vitae purus. Cras lacinia turpis nec orci blandit adipiscing. Morbi tempor commodo leo, quis scelerisque risus pretium quis. Cras suscipit magna eget tortor sagittis fringilla. Praesent arcu justo, ultrices eu interdum nec, ornare aliquam urna. Vivamus cursus posuere erat id faucibus.
+  %p Morbi semper ultrices porta. Aenean dignissim, sapien eget sodales mollis, massa urna malesuada elit, sit amet vulputate justo augue in massa. Praesent mattis accumsan blandit. Mauris nec enim ante. Sed fringilla interdum eros, nec lacinia turpis iaculis vel. Vestibulum leo ipsum, consequat a dignissim sit amet, egestas in urna. Donec nisl velit, pulvinar id ullamcorper vitae, imperdiet et leo. Donec ultricies cursus varius. Pellentesque elit arcu, pulvinar in fermentum non, faucibus eu quam. Suspendisse mollis aliquam sagittis. Vestibulum pellentesque accumsan arcu, vitae mattis tellus luctus id. Vivamus sed condimentum leo.
+
+.large-column.float-left
+  %h2 Slideshow
+
+#imgscroll-content
+  #imgscroll-legend
+    %p » Swipe for more pictures.
+  #imgscroll-imgs
+    .imgscroll-img#imgscroll-img
+      %img(src="images/dossier-01/nyc1.jpg")
+      %div(class="caption")
+        %p New York City #1
+    .imgscroll-img#imgscroll-img
+      %img(src="images/dossier-01/nyc1.jpg")
+      %div(class="caption")
+        %p New York City #1
+    .imgscroll-img#imgscroll-img
+      %img(src="images/dossier-01/nyc1.jpg")
+      %div(class="caption")
+        %p New York City #1
+/ Initiating the slideshow by calling the JS
+%script(src="js/imgscroll.js" type="text/javascript")
+
