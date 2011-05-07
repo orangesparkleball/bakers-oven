@@ -8,8 +8,8 @@ AboutUs.controllers :pages do
     render 'pages/cover'
   end
 
-  get :navigation, :map => "/navigation", :provides => [:html], :layout => nil do
-    render 'pages/navigation'
+  get :navigation, :map => "/inc/navigation", :provides => [:html], :layout => nil do
+    render 'pages/inc/navigation'
   end
 
   get :page, :map => '/:page', :provides => [:html], :layout => :laker do 

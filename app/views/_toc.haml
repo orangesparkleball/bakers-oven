@@ -1,13 +1,14 @@
-%a.toc-dossier{:href=> url(:pages, :cover, :format => :html)}
+- root ||= '.'
+%a.toc-dossier{:href=> "00.html"}
   .toc-dossier-number C
-  %img(class="toc-thumb" src="/images/toc-thumbs/00.jpg")
+  %img(class="toc-thumb" src="#{root}/images/toc-thumbs/00.jpg")
   %h1 Cover
   %p About OSB
 - for i in all_pages.sort
   - next if i == '00'
-  %a.toc-dossier{:href=> url(:pages, :page, i, :format => :html)}
-    .toc-dossier-number= i
-    %img(class="toc-thumb" src="/images/toc-thumbs/#{i}.jpg")
+  %a.toc-dossier{:href=> "#{i}.html"}
+    .toc-dossier-number= Integer(i).to_s
+    %img(class="toc-thumb" src="#{root}/images/toc-thumbs/#{i}.jpg")
     %h1 Cover
     %p About OSB
 
