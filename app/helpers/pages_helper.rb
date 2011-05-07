@@ -10,15 +10,17 @@ AboutUs.helpers do
   end
   def all_pages
     haml_view_paths = Dir.glob('app/views/pages/*.haml').map {|path| path[0..-6]} 
-    haml_view_paths.collect do |haml_path|
+    pages = haml_view_paths.collect do |haml_path|
       static_view_path = File.basename(haml_path)
       if(static_view_path == 'cover')
         '00'
+      elsif(static_view_path == 'navigation')
+        nil
       else
         static_view_path
       end
     end
-
+    pages.compact
   end
   # Output the awesome conditional HTML IE sniffer in haml
   def conditional_html( lang = "en", &block )
