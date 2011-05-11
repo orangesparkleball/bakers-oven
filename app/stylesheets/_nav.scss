@@ -120,18 +120,20 @@ a.nav-button:firstChild {
     padding-right: 20px !important;
     text-align: right !important
 }
+
+
 .nav-button.cover {
-    position: fixed; float: left;
+    float: left;
     background-image: url(../images/nav/cover-active.png);
     z-index: 2999;
 	display:block;
 	margin:0px;
+  margin-left: -28px;
 }
 .nav-button.cover .nav-button-text {    width: 45px }
 .nav-button.cover:hover {    background-image: url(../images/nav/cover-active.png) }
 .nav-button.next {
-    position: fixed;
-    margin-left: 65px;
+    float: left;
     z-index: 1999;
     background-image: url(../images/nav/next-active.png);
 	
@@ -139,13 +141,17 @@ a.nav-button:firstChild {
 .nav-button.next .nav-button-text {    width: 90px }
 .nav-button.next:hover {    background-image: url(../images/nav/next-active.png) }
 .nav-button.prev {
-    position: fixed;
-    margin-left: 36px;
+    float: left;
+    margin-left: 6px;
     z-index: 1999;
     background-image: url(../images/nav/prev-active.png);
+    &.empty, &.empty:hover{
+      background-image: none;
+    }
+    
 }
 .nav-button.prev .nav-button-text {    width: 120px }
-.nav-button.prev:hover {    background-image: url(../images/nav/prev-active.png) }
+.nav-button.prev:hover {    background-image: url(../images/nav/prev-active.png);  }
 .logo-small {
     position: fixed;
     left: 45%;
@@ -356,7 +362,10 @@ px      68    160    252    344    436    528    620    712
 	.nav-button.toc {
     margin-right: 0px;
   
-}
+  }
+  .nav-button.cover{
+    margin-left: 0px;
+  }
 }
 
 

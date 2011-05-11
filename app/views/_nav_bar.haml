@@ -7,18 +7,17 @@
         #includeTOC
           .hyphenate= partial('toc')
 
-/ Include the small logo and the cover link
-#includeLogoAndCoverlink= partial('logo-coverlink')
+    #includeLogoAndCoverlink= partial('logo-coverlink')
 
-/ Link to the next dossier
-- if(params[:next_num])
-  %a(href="#{url(:pages, :page, ("%02d" % params[:next_num]), :format => 'html')}" class="nav-button next")
-    .nav-button-text Next Page
-/ Link to the previous dossier. It's the first page, so we don't need that one.
-- if(params[:prev_num] && params[:page] != '00')
-  %a(href="#{url(:pages, :page, ("%02d" % params[:prev_num]), :format => 'html')}" class="nav-button prev")
-    .nav-button-text Previous Page
-/ Implementing the Dossier-Number
+    - if(params[:prev_num] && params[:page] != '00')
+      %a(href="#{url(:pages, :page, ("%02d" % params[:prev_num]), :format => 'html')}" class="nav-button prev")
+        .nav-button-text Previous Page
+    - else
+      %a.nav-button.prev.empty &nbsp;
+    - if(params[:next_num])
+      %a(href="#{url(:pages, :page, ("%02d" % params[:next_num]), :format => 'html')}" class="nav-button next")
+        .nav-button-text Next Page
+    / Implementing the Dossier-Number
 - unless(params[:page_num] < 1)
   #dossier-number.dossier-number
     %p= params[:page]
