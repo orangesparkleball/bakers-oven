@@ -45,10 +45,9 @@
     .content-element
       / Starting Headline
       .starting-headline
-        %h1 This is built with <em>Laker</em> – <br />  A compendium for building digital magazines with HTML5</h1>
-
+        %h1= @title
     / "content-element" ensures, that content is placed within the right margins
-    .content-element= yield
+    = yield
 
   / Include footer data from inc/footer.html
   .footer

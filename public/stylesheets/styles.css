@@ -282,6 +282,7 @@ px      68    160    252    344    436    528    620    712    804    896
   padding-top: 120px;
   background-color: #efefef;
   background-image: url(../../images/dossier-zuvielaltes/dossier-start.jpg);
+  background-position: center;
   background-size: cover;
   -moz-background-size: cover;
   background-repeat: no-repeat; }
@@ -1213,6 +1214,7 @@ px      68    160    252    344    436    528    620    712    804    896
 */
 #imgscroll-content {
   position: relative;
+  clear: both;
   width: 100%;
   height: auto;
   margin-top: 0px;
@@ -1243,18 +1245,16 @@ px      68    160    252    344    436    528    620    712    804    896
   -webkit-transition-timing-function: ease-out;
   /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
   -webkit-transform: translate3d(0px, 0px, 0px); }
-
-#imgscroll-img {
-  display: inline;
-  float: left;
-  width: 100%;
-  height: auto;
-  /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
-  -webkit-transform: translate3d(0px, 0px, 0px); }
-
-#imgscroll-img img {
-  display: inline;
-  width: 100%; }
+  #imgscroll-imgs .imgscroll-img {
+    display: inline;
+    float: left;
+    width: 100%;
+    height: auto;
+    /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+    -webkit-transform: translate3d(0px, 0px, 0px); }
+    #imgscroll-imgs .imgscroll-img img {
+      display: inline;
+      width: 100%; }
 
 /*
 ##########################################################################
@@ -1290,10 +1290,9 @@ px      68    160    252    344    436    528    620    712
 
   #imgscroll-imgs {
     width: 4000%; }
-
-  #imgscroll-img {
-    float: left;
-    width: 768px !important; } }
+    #imgscroll-imgs .imgscroll-img {
+      float: left;
+      width: 768px !important; } }
 /*
 ##########################################################################
 ##########################################################################
@@ -1314,10 +1313,9 @@ px      68    160    252    344    436    528    620    712    804    896
 
   #imgscroll-imgs {
     width: 4000%; }
-
-  #imgscroll-img {
-    float: left;
-    width: 1024px !important; } }
+    #imgscroll-imgs .imgscroll-img {
+      float: left;
+      width: 1024px !important; } }
 /*
 ##########################################################################
 ##########################################################################
@@ -1341,10 +1339,9 @@ px      68    160    252
 
   #imgscroll-imgs {
     width: 4000%; }
-
-  #imgscroll-img {
-    float: left;
-    width: 320px !important; } }
+    #imgscroll-imgs .imgscroll-img {
+      float: left;
+      width: 320px !important; } }
 /*		
 ##########################################################################
 ##########################################################################
@@ -1360,7 +1357,7 @@ px      68    160    252    344    436
 ##########################################################################
 */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  #imgscroll-img {
+  #imgscroll-imgs .imgscroll-img {
     float: left;
     width: 480px !important; } }
 /*		
@@ -1795,6 +1792,10 @@ body#cover {
 
 .dossier-start-bg {
   background-image: url(../images/cover/dossier-start-bg.jpg); }
+  #page-01 .dossier-start-bg {
+    background-image: url(../images/dossier-01/dossier-start-bg.jpg); }
+  #page-02 .dossier-start-bg {
+    background-image: url(../images/dossier-02/dossier-start-bg.jpg); }
 
 /*
 ##########################################################################

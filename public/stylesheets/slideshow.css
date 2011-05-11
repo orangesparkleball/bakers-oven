@@ -1,21 +1,21 @@
 /*
 Syntax error: Undefined variable: "$accent_color".
-        on line 25 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss
+        on line 26 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss
 
-20:     overflow: hidden
-21: }
-22: #imgscroll-legend {
-23:     display: none;
-24:     margin-bottom: 0px;
-25:     background-color: $accent_color;
-26: }
-27: #imgscroll-legend p {
-28:     margin-bottom: 0px;
-29:     padding: 10px;
-30:     color: #000;
+21:     overflow: hidden;
+22: }
+23: #imgscroll-legend {
+24:     display: none;
+25:     margin-bottom: 0px;
+26:     background-color: $accent_color;
+27: }
+28: #imgscroll-legend p {
+29:     margin-bottom: 0px;
+30:     padding: 10px;
+31:     color: #000;
 
 Backtrace:
-/Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss:25
+/Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss:26
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/script/variable.rb:45:in `_perform'
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/script/node.rb:40:in `perform'
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/sass-3.1.1/lib/sass/../sass/tree/visitors/perform.rb:215:in `visit_prop'
@@ -68,16 +68,48 @@ Backtrace:
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:71:in `call'
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:64:in `each'
 /Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/padrino-core-0.9.26/lib/padrino-core/router.rb:64:in `call'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:99:in `start'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `each'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `start'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `start'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:13:in `run'
-/Users/therabidbanana/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/bin/nack_worker:4
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/rack-1.2.2/lib/rack/mock.rb:71:in `request'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@about_us/gems/rack-1.2.2/lib/rack/mock.rb:56:in `get'
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:35:in `create_files'
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:35:in `open'
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:35:in `create_files'
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:45
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:39:in `each'
+/Users/therabidbanana/Desktop/projects/devsites/about_us/Rakefile:39
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:636:in `call'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:636:in `execute'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:631:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:631:in `execute'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:597:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:590:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:607:in `invoke_prerequisites'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:604:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:604:in `invoke_prerequisites'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:596:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:590:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:607:in `invoke_prerequisites'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:604:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:604:in `invoke_prerequisites'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:596:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/rubies/ruby-1.8.7-p334/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:590:in `invoke_with_call_chain'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:583:in `invoke'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2051:in `invoke_task'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2029:in `top_level'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2029:in `each'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2029:in `top_level'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2023:in `top_level'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2001:in `run'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:2068:in `standard_exception_handling'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/lib/rake.rb:1998:in `run'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/gems/rake-0.8.7/bin/rake:31
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/bin/rake:19:in `load'
+/Users/therabidbanana/.rvm/gems/ruby-1.8.7-p334@global/bin/rake:19
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$accent_color\".\A         on line 25 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss\A \A 20:     overflow: hidden\A 21: }\A 22: #imgscroll-legend {\A 23:     display: none;\A 24:     margin-bottom: 0px;\A 25:     background-color: $accent_color;\A 26: }\A 27: #imgscroll-legend p {\A 28:     margin-bottom: 0px;\A 29:     padding: 10px;\A 30:     color: #000;"; }
+  content: "Syntax error: Undefined variable: \"$accent_color\".\A         on line 26 of /Users/therabidbanana/Desktop/projects/devsites/about_us/app/stylesheets/slideshow.scss\A \A 21:     overflow: hidden;\A 22: }\A 23: #imgscroll-legend {\A 24:     display: none;\A 25:     margin-bottom: 0px;\A 26:     background-color: $accent_color;\A 27: }\A 28: #imgscroll-legend p {\A 29:     margin-bottom: 0px;\A 30:     padding: 10px;\A 31:     color: #000;"; }

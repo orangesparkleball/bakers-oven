@@ -15,9 +15,10 @@ px      68    160    252    344    436    528    620    712    804    896
 
 #imgscroll-content {
     position: relative;
+    clear: both;
     width: 100%; height: auto;
     margin-top: 0px; margin-bottom: 120px;
-    overflow: hidden
+    overflow: hidden;
 }
 #imgscroll-legend {
     display: none;
@@ -30,7 +31,7 @@ px      68    160    252    344    436    528    620    712    804    896
     color: #000;
     font-size: 0.8em;
     text-transform: uppercase;
-    font-family: "PTSerifBold"
+    font-family: "PTSerifBold";
 }
 #imgscroll-imgs {
     display: inline; float: left;
@@ -41,16 +42,16 @@ px      68    160    252    344    436    528    620    712    804    896
     -webkit-transition-timing-function: ease-out;
     /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
     -webkit-transform: translate3d(0px,0px,0px);
-}
-#imgscroll-img {
-    display: inline; float: left;
-    width: 100%; height: auto;
-    /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
-    -webkit-transform: translate3d(0px,0px,0px);
-}
-#imgscroll-img img {
-    display: inline;
-    width: 100%
+    .imgscroll-img {
+        display: inline; float: left;
+        width: 100%; height: auto;
+        /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+        -webkit-transform: translate3d(0px,0px,0px);
+        img {
+            display: inline;
+            width: 100%
+        }
+    }
 }
 
 
@@ -92,11 +93,13 @@ px      68    160    252    344    436    528    620    712
  
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
 	#imgscroll-legend {    display: block }
-	#imgscroll-imgs {    width: 4000% }
-	#imgscroll-img {
-	    float: left;
-	    width: 768px !important
-	}
+	#imgscroll-imgs {    
+    width: 4000%;
+    .imgscroll-img {
+          float: left;
+          width: 768px !important;
+      }
+  }
 }
 
 
@@ -118,11 +121,13 @@ px      68    160    252    344    436    528    620    712    804    896
 
 @media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
 	#imgscroll-legend {    display: block }
-	#imgscroll-imgs {    width: 4000% }
-	#imgscroll-img {
+	#imgscroll-imgs {    
+    width: 4000%;
+    .imgscroll-img {
 	    float: left;
-	    width: 1024px !important
-	}
+	    width: 1024px !important;
+    }
+  }
 }
 
 
@@ -145,11 +150,13 @@ px      68    160    252
 @media only screen and (max-width: 767px) { 
 	#imgscroll-legend {    display: block }
 	#imgscroll-content {    margin-bottom: 50px }
-	#imgscroll-imgs {    width: 4000% }
-	#imgscroll-img {
+	#imgscroll-imgs {    
+    width: 4000%;
+    .imgscroll-img {
 	    float: left;
-	    width: 320px !important
-	}
+	    width: 320px !important;
+    }
+  }
 }
 
 
@@ -169,10 +176,12 @@ px      68    160    252    344    436
 */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) { 
-	#imgscroll-img {
-	    float: left;
-	    width: 480px !important
-	}
+  #imgscroll-imgs{
+    .imgscroll-img {
+        float: left;
+        width: 480px !important;
+    }
+  }
 }
 
 

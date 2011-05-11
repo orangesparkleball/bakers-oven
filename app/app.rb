@@ -6,6 +6,7 @@ class AboutUs < Padrino::Application
   set :session_secret, "54a02c673abf4f0aab8965d95a3dcdfa8e7454e27599a088ed03c820489aca4c"
   set :sessions, true
 
+  set :pages, YAML::load( File.open( Padrino.root( 'config/pages.yml') ) )
   ##
   # Caching support
   #

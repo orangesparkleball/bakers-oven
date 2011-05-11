@@ -14,6 +14,7 @@ AboutUs.controllers :pages do
 
   get :page, :map => '/:page', :provides => [:html], :layout => :laker do 
     page_nums!
+    @title = settings.pages.select{|p| p["num"] == params[:page]}.first["title"]
     render "pages/#{params[:page]}"
   end
   # get :sample, :map => "/sample/url", :provides => [:any, :js] do

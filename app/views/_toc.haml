@@ -4,11 +4,10 @@
   %img(class="toc-thumb" src="#{root}/images/toc-thumbs/00.jpg")
   %h1 Cover
   %p About OSB
-- for i in all_pages.sort
-  - next if i == '00'
+- settings.pages.each do |p|
+  - i = p["num"]
   %a.toc-dossier{:href=> "#{i}.html"}
     .toc-dossier-number= Integer(i).to_s
     %img(class="toc-thumb" src="#{root}/images/toc-thumbs/#{i}.jpg")
-    %h1 Cover
-    %p About OSB
-
+    %h1 Page #{i}
+    %p= p["title"]

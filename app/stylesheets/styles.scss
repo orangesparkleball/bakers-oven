@@ -58,6 +58,9 @@ body {
 	
 .dossier-start-bg {
 	background-image:url(../images/cover/dossier-start-bg.jpg);
+  #page-01 & { background-image:url(../images/dossier-01/dossier-start-bg.jpg); }
+  #page-02 & { background-image:url(../images/dossier-02/dossier-start-bg.jpg); }
+
 }
 	
 
