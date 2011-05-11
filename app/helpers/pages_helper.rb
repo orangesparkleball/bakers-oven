@@ -1,6 +1,6 @@
 # Helper methods defined here can be accessed in any controller or view in the application
 
-AboutUs.helpers do
+BakersOven.helpers do
   def page_nums!
     actual_pages = all_pages.map{|page| Integer(page) }
     params[:page] ||= ("%02d" % 0)

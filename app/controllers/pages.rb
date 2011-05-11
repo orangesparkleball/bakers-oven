@@ -1,4 +1,4 @@
-AboutUs.controllers :pages do
+BakersOven.controllers :pages do
   get :index, :map => "/" do
     redirect url(:pages, :cover, :format => :html)
   end

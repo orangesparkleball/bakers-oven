@@ -1,4 +1,4 @@
-class AboutUs < Padrino::Application
+class BakersOven < Padrino::Application
   register SassInitializer
   register Padrino::Mailer
   register Padrino::Helpers
