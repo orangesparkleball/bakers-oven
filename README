@@ -1,0 +1,37 @@
+# Baker's Oven
+## A Simple hpub Generator
+
+Baker's Oven generates HTML and CSS with a Padrino based application. This gives
+us the ability to use HAML, SASS, partials and layouts. At some point I may also
+build a simple database interface to allow non-technical people to add pages.
+
+## Installation
+
+-- from oven dir --
+$ bundle install
+
+-- during development --
+$ padrino start 
+
+## Deployment
+
+When ready to deploy, rake tasks are available to generate static html files and 
+stylesheets. 
+
+
+$ rake clean  
+
+Remove all of the book files
+
+$ rake build
+
+Build all of the book files in the book/ dir
+
+$ rake compile
+
+Cleans, builds, then zips into an hpub and moves to pkg/ dir
+
+$ rake deploy
+
+If set up, can deploy your latest hpub to your server with rsync. Compiles a fresh
+copy beforehand.
