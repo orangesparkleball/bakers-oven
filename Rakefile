@@ -45,6 +45,7 @@ task :build do
     create_files(rack_url, static_view_path)
 
   end
+  system "sass --update app/stylesheets:public/stylesheets -t compact"
   system "cp -R public/* book/"
 
 end
@@ -59,18 +60,18 @@ end
 desc "compile a fresh book"
 task :compile => [:clean, :build] do
   puts "Zipping file"
-  system "cd book; zip -r about-osb *"
+  system "cd book; zip -r my_book *"
   unless File.directory?('pkg')
     puts "making dir : "+'pkg'
     FileUtils.mkdir_p('pkg')
   end
 
-  system "cp book/about-osb.zip pkg/about-osb.hpub"
+  system "cp book/my_book.zip pkg/my_book.hpub"
   puts "book in pkg"
 end
 
 desc "deploy latest book"
 task :deploy => :compile do
-  puts "rsync -rtz  pkg/ oscarosb@review.osb.co:~/pubs.osb.co/books/"
-  system "rsync -rtz  pkg/ oscarosb@review.osb.co:~/pubs.osb.co/books/"
+  # puts "rsync -rtz  pkg/ username@server:~/path/to/books/"
+  # system "rsync -rtz  pkg/ username@server:~/path/to/books/"
 end
