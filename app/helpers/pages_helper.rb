@@ -14,7 +14,7 @@ BakersOven.helpers do
       static_view_path = File.basename(haml_path)
       if(static_view_path == 'cover')
         '00'
-      elsif(static_view_path == 'navigation')
+      elsif(static_view_path == 'index')
         nil
       else
         static_view_path
