@@ -1,0 +1,7 @@
+--- 
+:test: none
+:renderer: haml
+:mock: none
+:script: jquery
+:orm: datamapper
+:stylesheet: sass
