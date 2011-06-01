@@ -16,22 +16,39 @@
   %meta(name="format-detection" content="telephone=no")
 
   %title= @current_book ? @current_book.title : 'Books'
+  
+  - @docroot ||= '/'
 
-  %link(href="./stylesheets/styles.css" rel="stylesheet" type="text/css" )
+  %link(href="#{@docroot}stylesheets/styles.css" rel="stylesheet" type="text/css" )
 
 
-  %script(src="./javascripts/libs/modernizr.js" type="text/javascript")
-  %script(src="./javascripts/jquery.js" type="text/javascript")
-  %script(src="./javascripts/libs/jquery.touchSwipe.js" type="text/javascript")
-
+  %script(src="#{@docroot}javascripts/libs/modernizr.js" type="text/javascript")
+  %script(src="#{@docroot}javascripts/jquery.js" type="text/javascript")
+  %script(src="#{@docroot}javascripts/libs/jquery.touchSwipe.js" type="text/javascript")
   /
     %script(type="text/javascript" src="./javascripts/libs/jquery.jplayer.min.js")
 
-%body(id="#{@location||'cover'}")
+%body(id="#{@location||'project'}")
 
   = partial('nav_bar')
 
-  = yield
+  / Enable text hyphenation with Hyphenator.js
+  .hyphenate
+
+    / Dossier start image
+    .dossier-start-bg{:style => @page ? "background-image: url(#{@page.cover_image.file})" : ""}
+
+    / Arrow which indicates the start of the text
+    .dossier-headline-arrow
+      %img(src="#{@docroot}images/dossier-headline-arrow.png")
+
+    / "content-element" ensures, that content is placed within the right margins
+    .content-element
+      / Starting Headline
+      .starting-headline
+        %h1= @title
+    / "content-element" ensures, that content is placed within the right margins
+    .content-element= yield
 
   / Include footer data from inc/footer.html
   .footer

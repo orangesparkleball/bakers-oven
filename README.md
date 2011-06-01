@@ -31,4 +31,4 @@ Running Baker's Oven
 1. `$ rackup`
 2. Go to the admin panel in your browser: http://localhost:9292/admin
 3. Follow directions to create book
-
+4. Preview at http://localhost:9292/

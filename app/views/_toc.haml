@@ -1,6 +1,6 @@
 - root ||= '.'
 - if @current_book
-  - @current_book.pages.each do |p|
+  - @pages.each do |p|
     - i = p.page_number
     %a.toc-dossier{:href=> url(:book, :show_page, @current_book.id, p.page_number)}
       .toc-dossier-number= Integer(i.gsub(/^[0]+/, '')).to_s
