@@ -1,0 +1,3 @@
+%ul
+  - Book.each do |b|
+    %li= link_to b.title, url(:book, :show, b.id)

@@ -1,7 +1,12 @@
 Admin.controllers :uploads do
 
   get :index do
-    @uploads = Upload.all
+    if @current_book
+      @uploads = @current_book.uploads.all
+    else
+      @uploads = Upload.all
+    end
+
     render 'uploads/index'
   end
 

@@ -30,8 +30,13 @@ class Admin < Padrino::Application
   end
 
   access_control.roles_for :admin do |role|
-    role.project_module :uploads, "/uploads"
     role.project_module :books, "/books"
+    role.project_module :pages, "/pages"
+    role.project_module :uploads, "/uploads"
     role.project_module :accounts, "/accounts"
+  end
+
+  before do
+    @current_book = Book.get(session[:current_book]) if session[:current_book]
   end
 end

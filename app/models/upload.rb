@@ -4,6 +4,7 @@ class Upload
 
   # property <name>, <type>
   property :id, Serial
+  property :title, String
   property :file, Text, :auto_validation => false
   property :created_at, DateTime
    mount_uploader :file, Uploader

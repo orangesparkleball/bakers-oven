@@ -100,6 +100,7 @@ GEM
     rack-flash (0.1.1)
       rack
     rake (0.9.0)
+    redcarpet (1.14.2)
     sass (3.1.2)
     sinatra (1.2.6)
       rack (~> 1.1)
@@ -125,4 +126,5 @@ DEPENDENCIES
   padrino (= 0.9.29)
   rack-flash
   rake
+  redcarpet
   sass

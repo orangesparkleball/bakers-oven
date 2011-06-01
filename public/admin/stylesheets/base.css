@@ -35,6 +35,9 @@ body{font-size:12px;font-family:sans-serif;}
 #main .block .content .inner{padding:0 15px 15px;}
 #main .block .content .inner .navform{text-align:right;}
 #main .main p.first{margin-top:0;}
+#sidebar .content ol{
+  padding: 15px;
+}
 #user-navigation{position:absolute;top:0px;right:20px;}
 #main-navigation{width:100%;}
 #user-navigation ul,#main-navigation ul,.secondary-navigation ul,#sidebar ul.navigation{margin:0;padding:0;list-style-type:none;}

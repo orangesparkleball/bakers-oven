@@ -8,5 +8,6 @@ class Book
   property :author, String, :length => 255
   property :creator, String, :length => 255
   has n, :uploads
+  has n, :pages
   
 end

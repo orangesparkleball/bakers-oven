@@ -10,6 +10,18 @@ Admin.controllers :books do
     render 'books/new'
   end
 
+  get :choose, :with => :id do
+    @current_book = Book.get(params[:id])
+    session[:current_book] = params[:id]
+    redirect url(:pages, :index)
+  end
+
+  get :unchoose do
+    @current_book = nil
+    session[:current_book] = nil
+    redirect url(:books, :index)
+  end
+
   post :create do
     @book = Book.new(params[:book])
     if @book.save

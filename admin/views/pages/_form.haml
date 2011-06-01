@@ -1,0 +1,42 @@
+.group
+  =f.label :title
+  =f.error_message_on :title
+  =f.text_field :title, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :page_number
+  =f.error_message_on :page_number
+  =f.text_field :page_number, :class => :text_field
+
+.group
+  =f.label :subtitle
+  =f.error_message_on :subtitle
+  =f.text_field :subtitle, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :body
+  =f.error_message_on :body
+  ~f.text_area :body, :class => :text_area, :rows => 20
+  %span.description Markdown text
+- if @current_book
+  =f.hidden_field :book, :value => @current_book.id
+  .group
+    =f.label :cover_image
+    =f.error_message_on :cover_image
+    =f.select :cover_image, :collection => @current_book.uploads, :fields => [:title, :id], :class => :select, :selected => @page.cover_image.id, :include_blank => true
+- else
+  .group
+    =f.label :book
+    =f.error_message_on :book
+    =f.select :book, :collection => Book.all, :fields => [:title, :id], :class => :select, :selected => @page.book.id
+  .group
+    =f.label :cover_image
+    =f.error_message_on :cover_image
+    =f.select :cover_image, :collection => Upload.all, :fields => [:title, :id], :class => :select, :selected => @page.cover_image.id, :include_blank => true
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:pages, :index)}';return false", :class => :button

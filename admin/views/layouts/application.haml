@@ -7,16 +7,29 @@
   %body
     #container
       #header
-        %h1=link_to "Padrino Admin", url(:base_index)
+        %h1
+          - if(session[:current_book])
+            =link_to "Editing #{@current_book.title}"
+
+          -else
+            =link_to "Padrino Admin", url(:base_index)
+        
         #user-navigation
           %ul.wat-cf
             %li=link_to pat(:profile), url(:accounts, :edit, :id => current_account.id)
             %li=button_to pat(:logout), url(:sessions, :destroy), :method => :delete, :class => :button_to
         #main-navigation
           %ul.wat-cf
+            - if(@current_book)
+              %li=link_to 'Close Book', url(:books, :unchoose)
             -project_modules.each do |project_module|
-              %li{:class => ("active" if request.path_info =~ /^#{project_module.path}/)}
-                =link_to project_module.human_name, project_module.path("/admin")
+              - if(@current_book && !(project_module.human_name =~ /Accounts|Books/))
+                %li{:class => ("active" if request.path_info =~ /^#{project_module.path}/)}
+                  =link_to project_module.human_name, project_module.path("/admin")
+              - elsif(!@current_book && project_module.human_name =~ /Accounts|Books/)
+                %li{:class => ("active" if request.path_info =~ /^#{project_module.path}/)}
+                  =link_to project_module.human_name, project_module.path("/admin")
+
       #wrapper.wat-cf
         .flash=[:error, :warning, :notice].map { |type| flash_tag(type, :class => "message #{type}") }.join
         #main

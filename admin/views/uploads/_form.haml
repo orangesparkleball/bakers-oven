@@ -1,11 +1,20 @@
 .group
+  =f.label :title
+  =f.error_message_on :title
+  =f.text_field :title, :class => :text_field
+- if(@upload.file.to_s)
+  %img{:src => @upload.file, :style => 'width: 90%'}
+.group
   =f.label :file
   =f.error_message_on :file
   =f.file_field :file, :class => :text_field
-.group
-  =f.label :book
-  =f.error_message_on :book
-  =f.select :book, :collection => Book.all, :fields => [:title, :id], :class => :select, :selected => @upload.book.id
+- if @current_book
+  =f.hidden_field :book, :value => @current_book.id
+- else
+  .group
+    =f.label :book
+    =f.error_message_on :book
+    =f.select :book, :collection => Book.all, :fields => [:title, :id], :class => :select, :selected => @upload.book.id
 
 
 .group.navform.wat-cf
