@@ -8,10 +8,13 @@ gem 'rake'
 gem 'rack-flash'
 
 # Component requirements
+gem 'carrierwave'
+gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'sass'
 gem 'haml'
 gem 'dm-sqlite-adapter'
 gem 'data_mapper'
+gem 'carrierwave'
 
 # Test requirements
 

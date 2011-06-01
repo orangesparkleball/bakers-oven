@@ -4,6 +4,8 @@ GEM
     activesupport (3.0.7)
     addressable (2.2.6)
     bcrypt-ruby (2.1.4)
+    carrierwave (0.5.4)
+      activesupport (~> 3.0)
     data_mapper (1.1.0)
       dm-aggregates (= 1.1.0)
       dm-constraints (= 1.1.0)
@@ -115,6 +117,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
+  carrierwave
   data_mapper
   dm-sqlite-adapter
   haml

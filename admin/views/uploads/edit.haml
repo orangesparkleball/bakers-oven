@@ -1,0 +1,15 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first=link_to pat(:list), url(:uploads, :index)
+      %li=link_to pat(:new), url(:uploads, :new)
+      %li.active=link_to pat(:edit), url(:uploads, :edit, :id => @upload.id)
+  .content
+    %h2.title
+      =pat(:edit)
+      =mt(:upload)
+    .inner
+      -form_for :upload, url(:uploads, :update, :id => @upload.id), :method => :put, :class => :form, :enctype=>"multipart/form-data" do |f|
+        =partial "uploads/form", :locals => { :f => f }
+
+-content_for :sidebar, partial("base/sidebar")

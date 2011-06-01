@@ -1,0 +1,31 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:books, :index)
+      %li=link_to pat(:new), url(:books, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:books)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:book, :id)
+          %th=mat(:book, :title)
+          %th=mat(:book, :author)
+          %th=mat(:book, :creator)
+          %th.last="&nbsp;"
+        -@books.each do |book|
+          %tr
+            %td.first=book.id
+            %td=book.title
+            %td=book.author
+            %td=book.creator
+            %td.last
+              =button_to pat(:edit), url(:books, :edit, :id => book.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:books, :destroy, :id => book.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

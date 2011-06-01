@@ -1,0 +1,29 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:uploads, :index)
+      %li=link_to pat(:new), url(:uploads, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:uploads)
+    .inner
+      %table.table
+        %tr
+          %th.first=mat(:upload, :id)
+          %th=mat(:upload, :file)
+          %th=mat(:upload, :created_at)
+          %th.last="&nbsp;"
+        -@uploads.each do |upload|
+          %tr
+            %td.first=upload.id
+            %td=upload.file
+            %td=upload.created_at
+            %td.last
+              =button_to pat(:edit), url(:uploads, :edit, :id => upload.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:uploads, :destroy, :id => upload.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')"
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")
