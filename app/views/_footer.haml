@@ -1,0 +1,9 @@
+.footer.container
+  %p 
+    - if(@current_book)
+      &copy; #{@current_book.creator}
+    - else
+      %a(href="http://www.orangesparkleball.com") &copy; Orange Sparkle Ball, Inc.
+    %br
+    
+

@@ -1,0 +1,25 @@
+- if @current_book
+  .nav-bar
+    .nav-bar-container
+      .toc.nav-button
+        .toc-label
+          %a(href="#") Contents
+        .toc-list
+          #includeTOC
+            .hyphenate= partial('toc')
+
+      #includeLogoAndCoverlink= partial('logo-coverlink')
+
+      - if(@prev_page)
+        %a(href="#{url(:book, :show_page, @current_book.id, @prev_page.page_number)}" class="nav-button prev")
+          .nav-button-text Previous Page
+      - else
+        %a.nav-button.prev.empty &nbsp;
+      - if(@next_page)
+        %a(href="#{url(:book, :show_page, @current_book.id, @next_page.page_number)}" class="nav-button next")
+          .nav-button-text Next Page
+  / Navigation bar edges
+  .edge-left
+  .edge-right
+
+

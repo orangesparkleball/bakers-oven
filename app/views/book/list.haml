@@ -1,3 +1,6 @@
 %ul
   - Book.each do |b|
-    %li= link_to b.title, url(:book, :show, b.id)
+    - if b.pages.size > 0
+      %li= link_to b.title, url(:book, :show, b.id)
+    - else
+      %li #{b.title} (no pages)
