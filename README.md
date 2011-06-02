@@ -32,3 +32,10 @@ Running Baker's Oven
 2. Go to the admin panel in your browser: http://localhost:9292/admin
 3. Follow directions to create book
 4. Preview at http://localhost:9292/
+
+Running on a Remote Server
+--------------------------
+
+Currently not supported - need to figure out the most efficient way to
+allow multiple books to be built (currently all built in a single tmp/book dir
+in the filesystem).
