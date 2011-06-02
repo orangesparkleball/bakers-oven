@@ -7,16 +7,16 @@
         .toc-list
           #includeTOC
             .hyphenate= partial('toc')
-
-      #includeLogoAndCoverlink= partial('logo-coverlink')
-
+      #includeLogoAndCoverlink
+        %a(href="#{@export ? @cover_page.page_number + '.html' : url(:book, :show_page, @current_book.id, @cover_page.page_number)}" class="nav-button cover")
+          %div(class="nav-button-text") Cover
       - if(@prev_page)
-        %a(href="#{url(:book, :show_page, @current_book.id, @prev_page.page_number)}" class="nav-button prev")
+        %a(href="#{@export ? @prev_page.page_number + '.html' : url(:book, :show_page, @current_book.id, @prev_page.page_number)}" class="nav-button prev")
           .nav-button-text Previous Page
       - else
         %a.nav-button.prev.empty &nbsp;
       - if(@next_page)
-        %a(href="#{url(:book, :show_page, @current_book.id, @next_page.page_number)}" class="nav-button next")
+        %a(href="#{@export ? @next_page.page_number + '.html' : url(:book, :show_page, @current_book.id, @next_page.page_number)}" class="nav-button next")
           .nav-button-text Next Page
   / Navigation bar edges
   .edge-left

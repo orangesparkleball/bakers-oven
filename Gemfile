@@ -16,6 +16,8 @@ gem 'dm-sqlite-adapter'
 gem 'data_mapper'
 gem 'carrierwave'
 gem 'redcarpet'
+gem 'rubyzip'
+
 # Test requirements
 
 

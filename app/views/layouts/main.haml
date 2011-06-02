@@ -1,5 +1,6 @@
 !!! 5
 - conditional_html
+- @docroot ||= '/'; @export ||= false;
 %head
   %meta(charset="utf-8")
 
@@ -17,7 +18,6 @@
 
   %title= @current_book ? @current_book.title : 'Books'
   
-  - @docroot ||= '/'
 
   %link(href="#{@docroot}stylesheets/styles.css" rel="stylesheet" type="text/css" )
 
@@ -36,7 +36,7 @@
   .hyphenate
 
     / Dossier start image
-    .dossier-start-bg{:style => @page ? "background-image: url(#{@page.cover_image.file})" : ""}
+    .dossier-start-bg{:style => @page ? "background-image: url(#{@page.cover_image_path(@export)})" : ""}
 
     / Arrow which indicates the start of the text
     .dossier-headline-arrow
@@ -46,9 +46,10 @@
     .content-element
       / Starting Headline
       .starting-headline
-        %h1= @title
+        %h1= @page ? @page.title : ""
     / "content-element" ensures, that content is placed within the right margins
-    .content-element= yield
+    .content-element
+      .large-column.float-left= yield
 
   / Include footer data from inc/footer.html
   .footer

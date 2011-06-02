@@ -1,9 +1,14 @@
 .footer.container
-  %p 
-    - if(@current_book)
-      &copy; #{@current_book.creator}
-    - else
-      %a(href="http://www.orangesparkleball.com") &copy; Orange Sparkle Ball, Inc.
-    %br
+  .content-element
+    %p 
+      - if(@current_book)
+        &copy; #{@current_book.creator}
+        - unless(@export)
+          |
+          %a{:href => url(:book, :download, @current_book.id)} Download
+      - else
+        %a(href="http://www.orangesparkleball.com") &copy; Orange Sparkle Ball, Inc.
+      %br
+      
     
 

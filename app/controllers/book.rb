@@ -17,6 +17,8 @@ BakersOven.controllers :book do
   # get "/example" do
   #   "Hello world!"
   # end
+  #
+  
 
   get :show_page, :map => '/book/:id/page/:page_number', :layout => :main do
     @page = Page.first(:book_id => params[:id], :page_number => params[:page_number])
@@ -24,11 +26,19 @@ BakersOven.controllers :book do
       @page = Page.first(:book_id => params[:id], :order => :page_number)
       redirect url(:book, :show_page, params[:id], @page.page_number)
     end
-    @current_book = @page.book
-    @pages = @page.book.pages.all(:order => :page_number)
-    page_num = @pages.index(@page)
-    @prev_page = @pages[page_num - 1] if page_num > 0
-    @next_page = @pages[page_num + 1] if page_num < (@pages.size - 1)
+    prep_pages(@page)
+    render "book/page"
+  end
+
+  get :show_export, :map => '/book_export/:id/page/:page_number', :layout => :main do
+    @page = Page.first(:book_id => params[:id], :page_number => params[:page_number])
+    unless @page
+      @page = Page.first(:book_id => params[:id], :order => :page_number)
+      redirect url(:book, :show_page, params[:id], @page.page_number)
+    end
+    prep_pages(@page)
+    @docroot = ""
+    @export = true
     render "book/page"
   end
 
@@ -45,5 +55,13 @@ BakersOven.controllers :book do
   get :list, :map => '/', :layout => :main do
     @books = Book.all
     render "book/list"
+  end
+
+  get :download, :with => :id do
+    @book = Book.get(params[:id])
+    file = @book.to_hpub
+    send_file file, :type => 'application/zip',
+                             :disposition => 'attachment',
+                             :filename => "#{@book.title}.hpub"
   end
 end

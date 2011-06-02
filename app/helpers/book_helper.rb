@@ -26,5 +26,15 @@ BakersOven.helpers do
     str += "\n<script>window.jQuery || document.write(\"<script src='#{url}'>\\x3C/script>\")</script>"
   end
   
+  def prep_pages(page)
+    @page = page
+    current_book = @page.book
+    @current_book = @page.book
+    @pages = @page.book.pages.all(:order => :page_number)
+    page_num = @pages.index(@page)
+    @prev_page = @pages[page_num - 1] if page_num > 0
+    @next_page = @pages[page_num + 1] if page_num < (@pages.size - 1)
+    @cover_page = @pages.first
+  end
   # 
 end
