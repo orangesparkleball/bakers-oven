@@ -52,6 +52,7 @@ class Book
     system "cp -R public/stylesheets tmp/book/"
     system "cp -R public/javascripts tmp/book/"
     system "cp -R public/videos tmp/book/"
+    system "cp -R public/fonts tmp/book/"
     
   end
 end
